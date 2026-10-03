@@ -1,0 +1,56 @@
+{
+  "factory": {
+    "mandatory_ppe": ["helmet", "gloves", "safety_vest"],
+    "danger_signals": ["red_light", "fire", "smoke", "sparks"],
+    "rules": [
+      {
+        "id": "PPE-001",
+        "condition": "person_near_machine",
+        "requirement": "helmet_and_vest_required",
+        "severity": "high"
+      },
+      {
+        "id": "ENV-001",
+        "condition": "fire_detected",
+        "requirement": "no_fire_allowed",
+        "severity": "critical"
+      }
+    ]
+  },
+  "warehouse": {
+    "mandatory_ppe": ["safety_vest", "steel_toe_boots"],
+    "danger_signals": ["forklift_horn", "spilled_liquid"],
+    "rules": [
+       {
+        "id": "PPE-002",
+        "condition": "person_in_aisle",
+        "requirement": "safety_vest_required",
+        "severity": "medium"
+       }
+    ]
+  },
+  "construction": {
+    "mandatory_ppe": ["helmet", "high_vis_vest", "harness"],
+    "danger_signals": ["falling_objects", "heavy_machinery_active"],
+     "rules": [
+       {
+        "id": "PPE-003",
+        "condition": "person_at_height",
+        "requirement": "harness_required",
+        "severity": "critical"
+       }
+    ]
+  },
+  "laboratory": {
+    "mandatory_ppe": ["lab_coat", "safety_goggles", "gloves"],
+    "danger_signals": ["chemical_spill", "fumes"],
+     "rules": [
+       {
+        "id": "PPE-004",
+        "condition": "handling_chemicals",
+        "requirement": "goggles_and_gloves_required",
+        "severity": "high"
+       }
+    ]
+  }
+}
